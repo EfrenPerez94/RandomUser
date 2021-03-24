@@ -23,7 +23,7 @@ If you are running the project for the first time, run the following commands
 
 1. Install required pods to build the project.
 ```
-$ bundle exec pod install
+$ pod install
 ```
 
 ## App Architecture
