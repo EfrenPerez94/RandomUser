@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileHeaderView" customModule="RandomUser" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="tg4-AY-yNc"/>
+                <outlet property="descriptionLabel" destination="hlL-Hy-TOF" id="WTc-S8-NdJ"/>
+                <outlet property="followButton" destination="Wgw-WE-W1n" id="hcu-Rz-mEx"/>
+                <outlet property="profilePhotoImageView" destination="V9P-An-2yd" id="5GH-Xw-pAK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="434" height="275"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlL-Hy-TOF">
+                    <rect key="frame" x="217" y="125" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="13"/>
+                    <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAQ-jx-v7g">
+                    <rect key="frame" x="394" y="10" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Cdg-ZG-Jbs"/>
+                        <constraint firstAttribute="width" constant="20" id="Dbk-n6-u04"/>
+                    </constraints>
+                    <state key="normal" image="refresh"/>
+                    <connections>
+                        <action selector="refreshTouchUpInside" destination="-1" eventType="touchUpInside" id="aGb-QO-PwX"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="wTo-nR-1Hd">
+                    <rect key="frame" x="157" y="140" width="120" height="20"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="623-aL-p3K">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="EDg-lF-Iaj"/>
+                                <constraint firstAttribute="width" constant="20" id="IjC-Vw-kHp"/>
+                            </constraints>
+                            <state key="normal" image="phone-call"/>
+                            <connections>
+                                <action selector="phoneTouchUpInside" destination="-1" eventType="touchUpInside" id="Fom-ic-39y"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTa-RR-vav">
+                            <rect key="frame" x="50" y="0.0" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="aJc-6s-mPX"/>
+                                <constraint firstAttribute="width" constant="20" id="yBt-57-f1X"/>
+                            </constraints>
+                            <state key="normal" image="email"/>
+                            <connections>
+                                <action selector="emailTouchUpInside" destination="-1" eventType="touchUpInside" id="fNV-CO-vQ6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9c-Qv-YME">
+                            <rect key="frame" x="100" y="0.0" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Bw3-El-Dka"/>
+                                <constraint firstAttribute="width" constant="20" id="nZK-We-1Sb"/>
+                            </constraints>
+                            <state key="normal" image="pin"/>
+                            <connections>
+                                <action selector="locationTouchUpInside" destination="-1" eventType="touchUpInside" id="vnK-9F-Xge"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgw-WE-W1n" customClass="CustomButton" customModule="RandomUser" customModuleProvider="target">
+                    <rect key="frame" x="294" y="239" width="120" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="VUp-GW-VYS"/>
+                        <constraint firstAttribute="height" constant="26" id="qxp-S0-tSf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                    <state key="normal" title="Follow">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="13"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="followTouchUpInside" destination="-1" eventType="touchUpInside" id="Vys-0t-hZB"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V9P-An-2yd">
+                    <rect key="frame" x="167" y="15" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="V9P-An-2yd" secondAttribute="height" multiplier="1:1" id="Hay-Yf-kS6"/>
+                        <constraint firstAttribute="width" constant="100" id="whr-yF-sqy"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="V9P-An-2yd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="8hN-gf-6Bh"/>
+                <constraint firstItem="hlL-Hy-TOF" firstAttribute="top" secondItem="V9P-An-2yd" secondAttribute="bottom" constant="10" id="Jym-hR-oPU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Wgw-WE-W1n" secondAttribute="trailing" constant="20" id="KH1-xE-XfN"/>
+                <constraint firstItem="wTo-nR-1Hd" firstAttribute="top" secondItem="hlL-Hy-TOF" secondAttribute="bottom" constant="15" id="Pig-lL-BxL"/>
+                <constraint firstItem="wTo-nR-1Hd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WqN-61-wF7"/>
+                <constraint firstItem="jAQ-jx-v7g" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="ZNX-Op-SWK"/>
+                <constraint firstItem="V9P-An-2yd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bNE-zk-FX5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jAQ-jx-v7g" secondAttribute="trailing" constant="20" id="bRX-6W-tbj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Wgw-WE-W1n" secondAttribute="bottom" constant="10" id="pAk-fS-BJ9"/>
+                <constraint firstItem="hlL-Hy-TOF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vcu-aQ-TQh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="59.420289855072468" y="-21.603260869565219"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="email" width="64" height="64"/>
+        <image name="phone-call" width="64" height="64"/>
+        <image name="pin" width="64" height="64"/>
+        <image name="refresh" width="64" height="64"/>
+    </resources>
+</document>
